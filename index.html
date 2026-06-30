@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notizblock</title>
+    <link rel="icon" type="image/x-icon" href="./assets/icons/icons8-notizblock-48.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style/assets.css">
+    <link rel="stylesheet" href="./style/standard.css">
+    <link rel="stylesheet" href="./style/dialog.css">
+</head>
+
+<body onload="renderNotes()">
+
+    <main>
+        <section class="headline-section">
+            <div>
+                <h1>Notizblock</h1>
+            </div>
+            <div class="input-container">
+                <div class="input-title">
+                    <h2>Title:</h2>
+                    <input id="title-input" type="text">
+                </div>
+                <div>
+                    <img onclick="opdenDialog()" src="./assets/icons/trash.png" alt="trash">
+                </div>
+                <div class="input-title">
+                    <h2>Notiz:</h2>
+                    <input id="note-input" type="text">
+                </div>
+            </div>
+            <div>
+                <button class="notebutton" onclick="addTitle(); addNote()">Notiz speichern</button>
+            </div>
+        </section>
+
+        <section>
+            <div class="title-notes-content">
+                <div class="notes-icons">
+                    <img class="notes-img" src="./assets/icons/notiz.png" alt="notes">
+                    <div class="notes-content" id="content">
+                    </div>
+                </div>
+                <div class="notes-icons">
+                    <img class="notes-img" src="./assets/icons/archiv.png" alt="archiv">
+                    <div class="notes-content" id="archiv-content">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <dialog id="my-dialog">
+            <div class="trashclose">
+                <img src="./assets/icons/trash.png" alt="trash">
+                <p class="dialog-closebutton" onclick="closeDialog()">X</p>
+            </div>
+            <div class="trash-container" id="trash-content">
+            </div>
+        </dialog>
+
+    </main>
+    <script src="./scripts/tamplates.js"></script>
+    <script src="./script.js"></script>
+    <script src="./scripts/dialog.js"></script>
+
+</body>
+
+</html>

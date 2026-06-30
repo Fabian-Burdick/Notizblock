@@ -1,0 +1,58 @@
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 90%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(250, 199, 33);
+    border: 6px solid rgb(88, 42, 42);
+    border-radius: 50px;
+    outline: none;
+    gap: 20px;
+}
+
+dialog[open] {
+    display: flex;
+    flex-direction: column;
+
+}
+
+dialog::backdrop {
+    opacity: 0;
+    backdrop-filter: blur(3px);
+    transition: all 0, 5s ease-in;
+}
+
+dialog.opened::backdrop {
+    opacity: 1;
+}
+
+.trash-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.trashclose {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+dialog img {
+    height: 64px;
+    width: 64px;
+}
+
+.dialog-closebutton {
+    cursor: pointer;
+    font-weight: bold;
+    color: red;
+}
+
+.dialog-closebutton:hover {
+    scale: calc(120%);
+}
