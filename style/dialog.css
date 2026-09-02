@@ -51,6 +51,7 @@ dialog img {
     cursor: pointer;
     font-weight: bold;
     color: red;
+    font-size: 2rem;
 }
 
 .dialog-closebutton:hover {
